@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class poliomino {
 
+    // 1343
     public void greedy() {
 
         Scanner scanner = new Scanner(System.in);
