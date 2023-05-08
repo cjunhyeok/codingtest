@@ -8,6 +8,7 @@ import java.util.StringTokenizer;
 
 public class Hamburger {
 
+    // 19941
     public void greedy() throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
