@@ -3,7 +3,6 @@ package baekjoon.datastructure.stack;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Stack;
 import java.util.StringTokenizer;
 
 public class Bracket {
@@ -13,29 +12,28 @@ public class Bracket {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
         StringTokenizer st;
-        Stack<Integer> stack;
-
+        java.util.Stack<Character> stack;
+        boolean isFalse = false;
 
         for (int i = 0; i < N; i++) {
-            st = new StringTokenizer(br.readLine(), "");
-            stack = new Stack<>();
-            boolean isNo = false;
+            stack = new java.util.Stack();
+            st = new StringTokenizer(br.readLine(), " ");
+            isFalse = false;
 
-            String vps = st.nextToken();
-            for (int j = 0; j <= vps.length() - 1; j++) {
-
-                if (vps.charAt(j) == '(') {
-                    stack.add(1);
-                } else if (vps.charAt(j) == ')') {
-                    if (stack.empty()) {
-                        isNo = true;
+            String token = st.nextToken();
+            for (int j = 0; j < token.length(); j++) {
+                if (token.charAt(j) == '(') {
+                    stack.add(token.charAt(j));
+                } else if (token.charAt(j) == ')') {
+                    if (stack.isEmpty() || stack.peek() != '(') {
+                        isFalse = true;
                     } else {
                         stack.pop();
                     }
                 }
             }
 
-            if (stack.empty() && isNo == false) {
+            if (stack.isEmpty() && isFalse == false) {
                 System.out.println("YES");
             } else {
                 System.out.println("NO");
