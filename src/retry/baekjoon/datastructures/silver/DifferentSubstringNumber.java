@@ -14,8 +14,12 @@ public class DifferentSubstringNumber {
 
         Set<String> set = new HashSet<>();
 
-        while (true) {
-
+        for (int i = 0; i < line.length(); i++) {
+            for (int j = i + 1; j < line.length(); j++) {
+                set.add(line.substring(i, j));
+            }
         }
+
+        System.out.println(set.size());
     }
 }
