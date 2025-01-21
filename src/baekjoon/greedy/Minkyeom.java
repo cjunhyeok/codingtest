@@ -8,6 +8,7 @@ import java.util.StringTokenizer;
 public class Minkyeom {
 
     // 21314
+    // push했지만 이해 못함
     public void greedy() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;

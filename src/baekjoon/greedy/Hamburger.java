@@ -9,6 +9,7 @@ import java.util.StringTokenizer;
 public class Hamburger {
 
     // 19941
+    // push했지만 이해 못 함
     public void greedy() throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

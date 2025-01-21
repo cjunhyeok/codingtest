@@ -12,22 +12,22 @@ public class BalloonPop {
     // 2346
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(br.readLine());
+        int n = Integer.parseInt(br.readLine()); // 5
 
         Deque<int[]> q = new ArrayDeque<>();
         StringTokenizer st = new StringTokenizer(br.readLine());
 
         int[] arr = new int[n];
         for(int i=0; i<n; i++) {
-            arr[i] = Integer.parseInt(st.nextToken());
+            arr[i] = Integer.parseInt(st.nextToken()); // 3, 2, 1, -3, -1
         }
 
         StringBuilder sb = new StringBuilder();
         sb.append("1 ");
-        int in = arr[0];
+        int in = arr[0]; // 3
 
         for(int i=1; i<n; i++){
-            q.add(new int[] {(i+1), arr[i]});
+            q.add(new int[] {(i+1), arr[i]}); //(2, 2), (3, 1), (4, -3), (5, -1)
         }
 
         while(!q.isEmpty()) {

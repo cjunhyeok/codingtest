@@ -6,6 +6,7 @@ import java.util.Stack;
 public class StackSequence {
 
     // 1874
+    // 이해 해야됨
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

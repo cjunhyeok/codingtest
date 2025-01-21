@@ -28,6 +28,7 @@ public class HideAndSeek {
 
             if (n == K) {
                 answer = visited[n] - 1;
+                break;
             }
             if (n-1>=0 && visited[n-1] == 0)
             {

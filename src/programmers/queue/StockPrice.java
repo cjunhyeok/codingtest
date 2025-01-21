@@ -28,4 +28,36 @@ public class StockPrice {
 
         return answer;
     }
+
+    public int[] mySolution(int[] prices) {
+
+        int[] answer = new int[prices.length];
+        Queue<Integer> queue = new LinkedList();
+
+        for (int i = 0; i < prices.length; i++) {
+            queue.add(prices[i]);
+        }
+
+        int count = 0;
+        while (!queue.isEmpty()) {
+            int poll = queue.poll();
+            answer[count] = 0;
+
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                if (!queue.isEmpty()) {
+                    int top = queue.poll();
+                    answer[count]++;
+                    if (poll > top) {
+                        queue.add(top);
+                        break;
+                    }
+                    queue.add(top);
+                }
+            }
+            count++;
+        }
+
+        return answer;
+    }
 }

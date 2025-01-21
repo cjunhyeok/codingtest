@@ -78,5 +78,5 @@ public class BulbAndSwitch {
         } else {
             System.out.println(Math.min(cnt, cntLight));
         }
-    }
+;    }
 }

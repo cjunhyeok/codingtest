@@ -7,6 +7,7 @@ public class EasyStairNumber {
     static int N;
     static long mod = 1000000000;
 
+
     // 10844
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

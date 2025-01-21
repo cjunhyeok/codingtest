@@ -1,4 +1,4 @@
-package retry.baekjoon;
+package retry.baekjoon.datastructures.bronze;
 
 import java.io.BufferedReader;
 import java.io.IOException;
